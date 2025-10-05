@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TradeX – Smart Investments</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="logo">TradeX</div>
+    <img src="logo.png"  class="logo">
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#rates">Rates</a></li>
+      <li><a href="#investments">Investments</a></li>
+      <li><a href="#account">Account</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== HERO / CAROUSEL ===== -->
+  <section id="home" class="carousel">
+    <div class="carousel-slide active">
+      <h1>Secure & Fast Crypto Exchange</h1>
+      <p>Trade crypto and fiat instantly at the best rates.</p>
+    </div>
+    <div class="carousel-slide">
+      <h1>Earn With Investments</h1>
+      <p>Explore our high-return investment plans.</p>
+    </div>
+    <div class="carousel-slide">
+      <h1>24/7 Customer Support</h1>
+      <p>We’re here for you on phone, WhatsApp, and Telegram.</p>
+    </div>
+    <button id="prev">&#10094;</button>
+    <button id="next">&#10095;</button>
+  </section>
+
+  <!-- ===== SUPPORT LINES ===== -->
+  <section class="support">
+    <h2>Contact Support</h2>
+    <div class="support-lines">
+      <div class="support-box">
+        <h3>📞 Phone</h3>
+        <p>+234 800 123 4567</p>
+      </div>
+      <div class="support-box">
+        <h3>💬 WhatsApp</h3>
+        <p>+234 900 765 4321</p>
+      </div>
+      <div class="support-box">
+        <h3>✈️ Telegram</h3>
+        <p>@TradeXSupport</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RATES SECTION ===== -->
+  <section id="rates" class="rates">
+    <h2>Live Exchange Rates</h2>
+    <table id="ratesTable">
+      <thead>
+        <tr>
+          <th>Currency</th>
+          <th>Buy</th>
+          <th>Sell</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>BTC</td><td>$68,200</td><td>$68,450</td></tr>
+        <tr><td>ETH</td><td>$2,520</td><td>$2,540</td></tr>
+        <tr><td>USDT</td><td>$1.00</td><td>$1.00</td></tr>
+        <tr><td>BNB</td><td>$590</td><td>$598</td></tr>
+        <tr><td>NGN</td><td>₦1,580/$</td><td>₦1,600/$</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ===== ACCOUNT SECTION ===== -->
+  <section id="account" class="account">
+    <h2>User Access</h2>
+    <div class="account-buttons">
+      <button onclick="openModal('loginModal')">Login</button>
+      <button onclick="openModal('signupModal')">Sign Up</button>
+    </div>
+  </section>
+
+  <!-- ===== LOGIN MODAL ===== -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('loginModal')">&times;</span>
+      <h3>Login</h3>
+      <input type="text" placeholder="Email or Username" />
+      <input type="password" placeholder="Password" />
+      <button>Login</button>
+    </div>
+  </div>
+
+  <!-- ===== SIGNUP MODAL ===== -->
+  <div id="signupModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('signupModal')">&times;</span>
+      <h3>Create Account</h3>
+      <input type="text" placeholder="Username" />
+      <input type="email" placeholder="Email" />
+      <input type="password" placeholder="Password" />
+      <button>Sign Up</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 TradeX. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
