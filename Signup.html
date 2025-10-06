@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sign Up — TradeX</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ===== Minimal Header ===== -->
+  <header class="simple-header">
+    <div class="logo">TradeX</div>
+    <a class="back-home" href="index.html">← Back to Home</a>
+  </header>
+
+  <!-- ===== Signup Form ===== -->
+  <main class="auth-page">
+    <div class="auth-card">
+      <h2>Create an Account</h2>
+
+      <label for="suName">Username</label>
+      <input id="suName" type="text" placeholder="username" />
+
+      <label for="suEmail">Email</label>
+      <input id="suEmail" type="email" placeholder="email" />
+
+      <label for="suPass">Password</label>
+      <input id="suPass" type="password" placeholder="password" />
+
+      <div style="display:flex;gap:0.6rem;margin-top:0.8rem">
+        <button class="btn" id="signupBtn">Sign Up</button>
+        <a class="btn secondary" href="login.html">Login</a>
+      </div>
+
+      <p class="muted small" style="margin-top:0.8rem">
+        Demo only — accounts are stored locally in your browser.
+      </p>
+    </div>
+  </main>
+
+  <script src="J's.html"></script>
+  <script>
+    // handle signup button click
+    document.getElementById('signupBtn').addEventListener('click', () => {
+      const username = document.getElementById('suName').value.trim();
+      const email = document.getElementById('suEmail').value.trim();
+      const pass = document.getElementById('suPass').value.trim();
+
+      if (!username || !email || !pass) {
+        alert('Please fill all fields.');
+        return;
+      }
+
+      // Retrieve existing users from localStorage
+      const users = JSON.parse(localStorage.getItem('tx_users') || '[]');
+
+      // Check if user exists
+      if (users.find(u => u.email === email || u.username === username)) {
+        alert('User already exists.');
+        return;
+      }
+
+      // Save new user
+      users.push({
+        id: 'u_' + Date.now(),
+        username,
+        email,
+        password: btoa(pass), // encoded for demo only
+        isAdmin: false
+      });
+
+      localStorage.setItem('tx_users', JSON.stringify(users));
+      alert('Account created! You can now log in.');
+      window.location.href = 'login.html';
+    });
+  </script>
+</body>
+</html>
