@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login — TradeX</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="simple-header">
+    <div class="logo">TradeX</div>
+    <a class="back-home" href="index.html">← Back to Home</a>
+  </header>
+
+  <main class="auth-page">
+    <div class="auth-card">
+      <h2>Login</h2>
+
+      <label for="loginEmail">Email or Username</label>
+      <input id="loginEmail" type="text" placeholder="email or username" />
+
+      <label for="loginPass">Password</label>
+      <input id="loginPass" type="password" placeholder="password" />
+
+      <div style="display:flex;gap:0.6rem;margin-top:0.8rem">
+        <button class="btn" id="loginBtn">Login</button>
+        <a class="btn secondary" href="signup.html">Create account</a>
+      </div>
+
+      <p class="muted small" style="margin-top:0.8rem">
+        Admin demo credentials: <strong>admin@tradex.com / 12345</strong>
+      </p>
+    </div>
+  </main>
+
+  <script src="J's.html"></script>
+  <script>
+    document.getElementById('loginBtn').addEventListener('click', () => {
+      const email = document.getElementById('loginEmail').value.trim();
+      const pass = document.getElementById('loginPass').value.trim();
+      loginRedirect(email, pass); // function defined in J's.html
+    });
+  </script>
+</body>
+</html>
