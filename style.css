@@ -38,13 +38,12 @@ body {
   border-radius: 50%;
   object-fit: cover;
 }
-img.logo{
-  width: 45%;
-  height: 20%;
-  border-bottom-right-radius: 20%;
-  border-top-left-radius: 20%;
-  object-fit: none;
-  
+img.logo {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  margin-left: 10px;
 }
 
 .nav-links {
