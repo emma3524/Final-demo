@@ -223,3 +223,47 @@ footer {
     border-bottom-right-radius: 30px;
     border-top-left-radius: 30px;
 }
+/* ===== ADMIN PANEL ===== */
+.admin-panel {
+  display: none;
+  background: white;
+  padding: 2rem;
+  margin: 2rem auto;
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.admin-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.tab-btn {
+  background: var(--green);
+  color: white;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.tab-btn.logout {
+  background: crimson;
+}
+
+.tab {
+  display: none;
+  text-align: left;
+  background: #fafafa;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.tab.active {
+  display: block;
+}
