@@ -108,7 +108,31 @@
       <button>Sign Up</button>
     </div>
   </div>
+<!-- ===== ADMIN DASHBOARD (HIDDEN BY DEFAULT) ===== -->
+<section id="adminPanel" class="admin-panel">
+  <h2>Admin Dashboard</h2>
+  <div class="admin-tabs">
+    <button class="tab-btn" onclick="showTab('ratesTab')">Manage Rates</button>
+    <button class="tab-btn" onclick="showTab('usersTab')">Manage Users</button>
+    <button class="tab-btn" onclick="showTab('settingsTab')">Settings</button>
+    <button class="tab-btn logout" onclick="logout()">Logout</button>
+  </div>
 
+  <div id="ratesTab" class="tab active">
+    <h3>Manage Rates</h3>
+    <p>View and adjust crypto/fiat rates here.</p>
+  </div>
+
+  <div id="usersTab" class="tab">
+    <h3>Manage Users</h3>
+    <p>View user list, KYC, and account status.</p>
+  </div>
+
+  <div id="settingsTab" class="tab">
+    <h3>Platform Settings</h3>
+    <p>Change branding, contact links, and system info.</p>
+  </div>
+</section>
   <footer>
     <p>© 2025 TradeX. All Rights Reserved.</p>
   </footer>
