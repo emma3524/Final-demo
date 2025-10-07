@@ -62,7 +62,7 @@ body {
   text-align: center;
   padding: 100px 20px;
   background: radial-gradient(circle at top, #022f3b, #010d14);
-  min-height: 80vh;
+  min-height: 50vh;
 }
 
 .carousel-slide {
